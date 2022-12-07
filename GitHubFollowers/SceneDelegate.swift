@@ -8,15 +8,67 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = createTabbar()
+        window?.makeKeyAndVisible()
+    }
+    
+    
+    @available(iOS 15.0, *)
+    private func createTabbar() -> UITabBarController {
+        let tabBar = UITabBarController()
+        
+        let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        
+        let barTintColor: UIColor = .systemGray4
+        tabBarAppearance.backgroundColor = barTintColor
+        
+        updateTabBarItemAppearance(appearance: tabBarAppearance.compactInlineLayoutAppearance)
+        updateTabBarItemAppearance(appearance: tabBarAppearance.inlineLayoutAppearance)
+        updateTabBarItemAppearance(appearance: tabBarAppearance.stackedLayoutAppearance)
+        
+        tabBar.tabBar.standardAppearance = tabBarAppearance
+        tabBar.tabBar.scrollEdgeAppearance = tabBarAppearance
+        
+        tabBar.viewControllers = [createSeachNC(), createFavoritesNC()]
+        
+        return tabBar
+    } 
+
+    private func updateTabBarItemAppearance(appearance: UITabBarItemAppearance) {
+        let tintColor: UIColor = .systemGreen
+        
+        appearance.selected.iconColor = tintColor
+        appearance.selected.titleTextAttributes = [.foregroundColor : tintColor]
+    }
+    
+    
+    func createFavoritesNC() ->UINavigationController {
+        let favoritesListVC = FavoritesListVC()
+        favoritesListVC.title = "Favorites"
+        favoritesListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        
+        return UINavigationController(rootViewController: favoritesListVC)
+    }
+    
+    
+    func createSeachNC() -> UINavigationController {
+        let searchVC = SearchVC()
+        searchVC.title = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        
+        return UINavigationController(rootViewController: searchVC)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
