@@ -70,22 +70,54 @@
 		18A320BE293F9A8000EBC39F /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				18F6B8462942392600FDFB09 /* UIViewController+Ext.swift */,
-				18A320BF293F9A8000EBC39F /* AppDelegate.swift */,
-				18A320C1293F9A8000EBC39F /* SceneDelegate.swift */,
-				18A320D72940C9BA00EBC39F /* GFButton.swift */,
-				18A320D92940CD1A00EBC39F /* GFTextField.swift */,
-				18A320C8293F9A8300EBC39F /* Assets.xcassets */,
-				18A320CA293F9A8300EBC39F /* LaunchScreen.storyboard */,
-				18A320CD293F9A8300EBC39F /* Info.plist */,
+				18F6B84B29423CC600FDFB09 /* Support */,
+				18F6B84A29423C6700FDFB09 /* Extensions */,
+				18F6B84929423C2F00FDFB09 /* CustomViews */,
+				18F6B84829423BF700FDFB09 /* Screens */,
+			);
+			path = GitHubFollowers;
+			sourceTree = "<group>";
+		};
+		18F6B84829423BF700FDFB09 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
 				18A320D32940AB8900EBC39F /* SearchVC.swift */,
 				18A320DB2941F9F100EBC39F /* FollowerListVC.swift */,
 				18A320D52940ABCB00EBC39F /* FavoritesListVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		18F6B84929423C2F00FDFB09 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				18F6B8442942307C00FDFB09 /* GFAlertVC.swift */,
+				18A320D72940C9BA00EBC39F /* GFButton.swift */,
+				18A320D92940CD1A00EBC39F /* GFTextField.swift */,
 				18F6B84029422D5F00FDFB09 /* GFTitleLabel.swift */,
 				18F6B84229422EB600FDFB09 /* GFBodyLabel.swift */,
-				18F6B8442942307C00FDFB09 /* GFAlertVC.swift */,
 			);
-			path = GitHubFollowers;
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		18F6B84A29423C6700FDFB09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18F6B8462942392600FDFB09 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18F6B84B29423CC600FDFB09 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				18A320BF293F9A8000EBC39F /* AppDelegate.swift */,
+				18A320C1293F9A8000EBC39F /* SceneDelegate.swift */,
+				18A320C8293F9A8300EBC39F /* Assets.xcassets */,
+				18A320CA293F9A8300EBC39F /* LaunchScreen.storyboard */,
+				18A320CD293F9A8300EBC39F /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
