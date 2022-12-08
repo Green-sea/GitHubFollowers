@@ -12,6 +12,8 @@ class SearchVC: UIViewController {
     let logoImageView = UIImageView()
     let userNameTextField = GFTextField()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+    
+    var isUserNameEntered: Bool { return !userNameTextField.text!.isEmpty }
 
     
     override func viewDidLoad() {
@@ -20,6 +22,7 @@ class SearchVC: UIViewController {
         configureLogoImageView()
         configureTextField()
         configureCallToActinoButton()
+        createDismissKeyboardTapGesture()
     }
     
     
@@ -28,6 +31,11 @@ class SearchVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    
+    func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+    }
     
     func configureLogoImageView() {
         view.addSubview(logoImageView)
@@ -45,6 +53,7 @@ class SearchVC: UIViewController {
     
     func configureTextField() {
         view.addSubview(userNameTextField)
+        userNameTextField.delegate = self
         
         NSLayoutConstraint.activate([
             userNameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
@@ -57,6 +66,7 @@ class SearchVC: UIViewController {
     
     func configureCallToActinoButton() {
         view.addSubview(callToActionButton)
+        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -64,5 +74,25 @@ class SearchVC: UIViewController {
             callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+    
+    @objc func pushFollowerListVC() {
+        guard isUserNameEntered else {
+            print("No userName")
+            return
+        }
+        let followerListVC = FollowerListVC()
+        followerListVC.userName = userNameTextField.text
+        followerListVC.title = userNameTextField.text
+        navigationController?.pushViewController(followerListVC, animated: true)
+    }
+}
+
+
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFollowerListVC()
+        return true
     }
 }
