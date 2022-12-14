@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		185B07F0294880A900EBF0DA /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07EF294880A900EBF0DA /* Follower.swift */; };
 		185B07F22948816C00EBF0DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07F12948816C00EBF0DA /* User.swift */; };
+		185B07F52949FE3F00EBF0DA /* NerworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07F42949FE3F00EBF0DA /* NerworkManager.swift */; };
 		18A320C0293F9A8000EBC39F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A320BF293F9A8000EBC39F /* AppDelegate.swift */; };
 		18A320C2293F9A8000EBC39F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A320C1293F9A8000EBC39F /* SceneDelegate.swift */; };
 		18A320C9293F9A8300EBC39F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A320C8293F9A8300EBC39F /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		185B07EF294880A900EBF0DA /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		185B07F12948816C00EBF0DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		185B07F42949FE3F00EBF0DA /* NerworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NerworkManager.swift; sourceTree = "<group>"; };
 		18A320BC293F9A8000EBC39F /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A320BF293F9A8000EBC39F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A320C1293F9A8000EBC39F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		185B07F32949FE2F00EBF0DA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				185B07F42949FE3F00EBF0DA /* NerworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		18A320B3293F9A8000EBC39F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		18A320BE293F9A8000EBC39F /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				185B07F32949FE2F00EBF0DA /* Managers */,
 				185B07EE2948808D00EBF0DA /* Model */,
 				18F6B84B29423CC600FDFB09 /* Support */,
 				18F6B84A29423C6700FDFB09 /* Extensions */,
@@ -212,6 +223,7 @@
 				18A320D42940AB8900EBC39F /* SearchVC.swift in Sources */,
 				18F6B8452942307C00FDFB09 /* GFAlertVC.swift in Sources */,
 				18A320DC2941F9F100EBC39F /* FollowerListVC.swift in Sources */,
+				185B07F52949FE3F00EBF0DA /* NerworkManager.swift in Sources */,
 				185B07F0294880A900EBF0DA /* Follower.swift in Sources */,
 				18A320C0293F9A8000EBC39F /* AppDelegate.swift in Sources */,
 				18F6B84329422EB600FDFB09 /* GFBodyLabel.swift in Sources */,
