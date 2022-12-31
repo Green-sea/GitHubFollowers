@@ -26,7 +26,6 @@ class GFAlertVC: UIViewController {
         self.alertTitle = title
         self.message = message
         self.buttonTitle = buttonTitle
-        
     }
     
     
