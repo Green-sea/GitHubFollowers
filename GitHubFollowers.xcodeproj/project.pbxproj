@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180D53952964302E0096FF34 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D53942964302E0096FF34 /* UserInfoVC.swift */; };
 		185B07F0294880A900EBF0DA /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07EF294880A900EBF0DA /* Follower.swift */; };
 		185B07F22948816C00EBF0DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07F12948816C00EBF0DA /* User.swift */; };
 		185B07F52949FE3F00EBF0DA /* NerworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07F42949FE3F00EBF0DA /* NerworkManager.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180D53942964302E0096FF34 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		185B07EF294880A900EBF0DA /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		185B07F12948816C00EBF0DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		185B07F42949FE3F00EBF0DA /* NerworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NerworkManager.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				18A320D32940AB8900EBC39F /* SearchVC.swift */,
 				18A320DB2941F9F100EBC39F /* FollowerListVC.swift */,
 				18A320D52940ABCB00EBC39F /* FavoritesListVC.swift */,
+				180D53942964302E0096FF34 /* UserInfoVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				18F6B84329422EB600FDFB09 /* GFBodyLabel.swift in Sources */,
 				18F6B84129422D5F00FDFB09 /* GFTitleLabel.swift in Sources */,
 				18A320C2293F9A8000EBC39F /* SceneDelegate.swift in Sources */,
+				180D53952964302E0096FF34 /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
