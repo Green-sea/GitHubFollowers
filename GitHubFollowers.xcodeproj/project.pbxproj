@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		180D53952964302E0096FF34 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D53942964302E0096FF34 /* UserInfoVC.swift */; };
+		180D5397296468520096FF34 /* GFUserIngoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D5396296468520096FF34 /* GFUserIngoHeaderVC.swift */; };
+		180D5399296468AB0096FF34 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D5398296468AB0096FF34 /* GFSecondaryTitleLabel.swift */; };
+		180D539B29646F550096FF34 /* Constatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D539A29646F550096FF34 /* Constatns.swift */; };
 		185B07F0294880A900EBF0DA /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07EF294880A900EBF0DA /* Follower.swift */; };
 		185B07F22948816C00EBF0DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07F12948816C00EBF0DA /* User.swift */; };
 		185B07F52949FE3F00EBF0DA /* NerworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07F42949FE3F00EBF0DA /* NerworkManager.swift */; };
@@ -33,6 +36,9 @@
 
 /* Begin PBXFileReference section */
 		180D53942964302E0096FF34 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
+		180D5396296468520096FF34 /* GFUserIngoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserIngoHeaderVC.swift; sourceTree = "<group>"; };
+		180D5398296468AB0096FF34 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		180D539A29646F550096FF34 /* Constatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constatns.swift; sourceTree = "<group>"; };
 		185B07EF294880A900EBF0DA /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		185B07F12948816C00EBF0DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		185B07F42949FE3F00EBF0DA /* NerworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NerworkManager.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 			children = (
 				185B07F7294A0EA400EBF0DA /* ErrorMessage.swift */,
 				1898B81E2954774A0003A0BD /* UIhelper.swift */,
+				180D539A29646F550096FF34 /* Constatns.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -136,7 +143,6 @@
 		18BDDC292963415B00830A55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				18608F33294C76BA00A64B68 /* GFAvatarImageView.swift */,
 				18BDDC2F296341DE00830A55 /* GFEmptyStateView.swift */,
 			);
 			path = Views;
@@ -161,6 +167,7 @@
 		18BDDC2C2963417F00830A55 /* ImageViews */ = {
 			isa = PBXGroup;
 			children = (
+				18608F33294C76BA00A64B68 /* GFAvatarImageView.swift */,
 			);
 			path = ImageViews;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				18F6B8442942307C00FDFB09 /* GFAlertVC.swift */,
+				180D5396296468520096FF34 /* GFUserIngoHeaderVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 			children = (
 				18F6B84229422EB600FDFB09 /* GFBodyLabel.swift */,
 				18F6B84029422D5F00FDFB09 /* GFTitleLabel.swift */,
+				180D5398296468AB0096FF34 /* GFSecondaryTitleLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -302,6 +311,7 @@
 				18A320D62940ABCB00EBC39F /* FavoritesListVC.swift in Sources */,
 				18A320D82940C9BA00EBC39F /* GFButton.swift in Sources */,
 				18F6B8472942392600FDFB09 /* UIViewController+Ext.swift in Sources */,
+				180D539B29646F550096FF34 /* Constatns.swift in Sources */,
 				18608F34294C76BA00A64B68 /* GFAvatarImageView.swift in Sources */,
 				18A320D42940AB8900EBC39F /* SearchVC.swift in Sources */,
 				18F6B8452942307C00FDFB09 /* GFAlertVC.swift in Sources */,
@@ -312,11 +322,13 @@
 				185B07F52949FE3F00EBF0DA /* NerworkManager.swift in Sources */,
 				185B07F0294880A900EBF0DA /* Follower.swift in Sources */,
 				18BDDC30296341DE00830A55 /* GFEmptyStateView.swift in Sources */,
+				180D5399296468AB0096FF34 /* GFSecondaryTitleLabel.swift in Sources */,
 				18A320C0293F9A8000EBC39F /* AppDelegate.swift in Sources */,
 				18F6B84329422EB600FDFB09 /* GFBodyLabel.swift in Sources */,
 				18F6B84129422D5F00FDFB09 /* GFTitleLabel.swift in Sources */,
 				18A320C2293F9A8000EBC39F /* SceneDelegate.swift in Sources */,
 				180D53952964302E0096FF34 /* UserInfoVC.swift in Sources */,
+				180D5397296468520096FF34 /* GFUserIngoHeaderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,7 +56,7 @@ class NetworkManager {
     
     func getUserInfo(for username: String,
                       completed: @escaping(Result<User, GFError>) -> Void) {
-        let endPoint = baseUrl + username
+        let endPoint = baseUrl + "\(username)"
         
         guard let url = URL(string: endPoint) else {
             completed(.failure(.invalidUsername))
@@ -83,6 +83,7 @@ class NetworkManager {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let user = try decoder.decode(User.self, from: data)
+                print("NetworkManager user \(user)")
                 completed(.success(user))
             } catch {
                 completed(.failure(.invalidData))
